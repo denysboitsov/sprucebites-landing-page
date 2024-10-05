@@ -52,7 +52,7 @@ services:
     volumes:
       - certbot-etc:/etc/letsencrypt
       - wordpress:/var/www/html
-    command: certonly --webroot --webroot-path=/var/www/html --email $EMAIL --agree-tos --no-eff-email --staging -d sprucebites.com -d www.sprucebites.com
+    command: certonly --webroot --webroot-path=/var/www/html --email $EMAIL --agree-tos --no-eff-email --force-renewal -d sprucebites.com -d www.sprucebites.com
 
 volumes:
   certbot-etc:
